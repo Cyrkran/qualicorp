@@ -26,7 +26,6 @@ export default {
       this.planos = ev.planos.planos;
     },
     backToForm(ev){
-      debugger
       this.formSubmitted = false;
       this.planos = []
     }

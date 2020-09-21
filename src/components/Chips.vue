@@ -37,7 +37,8 @@ export default {
 <style>
 #Chips{
     width: max-content;
-    margin-right: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     display: inline-block;
 }
 

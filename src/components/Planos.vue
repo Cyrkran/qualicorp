@@ -37,10 +37,10 @@
                         </v-expansion-panel-header>
                         <v-expansion-panel-content>
                             <v-row style="width: 100%">
-                                <v-col cols="4">
+                                <v-col cols="12" md="4" xs="12" sm="12">
                                     <v-img :src="plan.operadoraLogo" aspect-ratio="2"></v-img>
                                 </v-col>
-                                <v-col cols="8">
+                                <v-col cols="12" md="8" xs="12" sm="12">
                                     <p>
                                         Plano {{plan.segmentacao}} com acomodação {{plan.tipo_acomodacao}} de nível {{plan.nivel}} <span v-if="plan.precos">e valor R${{plan.precos.total}}</span>
                                     </p>
@@ -98,5 +98,10 @@ export default {
 </script>
 
 <style>
-
+#Planos{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+}
 </style>

@@ -40,14 +40,14 @@
                 required
             ></v-select>
 
-            <div v-if="entidades.length > 0" class="chips">
+            <v-row v-if="entidades.length > 0" class="chips" align="center">
                 <Chips v-for="entidade in entidades" 
                     :key="entidade.RazaoSocial" 
                     :entity="entidade" 
                     :isSelected="selectedEntidade == entidade" 
                     v-on:ChipClicked="selectedEntidade = entidade"
                 />
-            </div>
+            </v-row>
 
             <v-date-picker v-if="selectedEntidade" 
                 v-model="dataNascimento" 
@@ -56,7 +56,7 @@
                 header-color="primary" 
                 :locale="'pt-br'" 
                 :max="today" 
-                :landscape="true" 
+                :landscape="$vuetify.breakpoint.mdAndUp" 
                 :loading="loading"
                 lazy-loading
                 full-width
@@ -217,7 +217,6 @@ export default {
 
 <style>
 #QualiForm{
-    height: 70vh;
     width: 60%;
     margin-right: auto;
     margin-left: auto;
